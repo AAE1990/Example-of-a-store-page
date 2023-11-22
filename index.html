@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task test</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./adaptive/adaptiveStyles.css">
+    <script async language="JavaScript" src="./scripts/popup.js" type="text/javascript"></script>
+    <script defer language="JavaScript" src="./scripts/slider.js" type="text/javascript"></script>
+    <script defer language="JavaScript" src="./scripts/selectCity.js" type="text/javascript"></script>
+    <script defer language="JavaScript" src="./scripts/yandexMap.js" type="text/javascript"></script>
+    <script defer language="JavaScript" src="./scripts/popupProdCat.js" type="text/javascript"></script>
+    <script defer language="JavaScript" src="./scripts/sliderInCatalog.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <main>
+        <!-- Header -->
+        <header class="Navigation">
+            <div class="container">
+                <div class="Logo">
+                    <p class="text-celestial">Celestial</p>
+                    <p class="logo-sometext">Покупки оптом из Китая</p>
+                </div>
+                <!-- For adaptive -->
+                <div class="forAdaptiveNav">
+                    <div class="icon_local iconLoc-1"></div>
+                    <div class="icon_local iconLoc-2"></div>
+                    <div class="icon_local iconLoc-3"></div>
+                </div>
+                <!-- For adaptive -->
+                <div class="Frame">
+                    <div class="Frame-top">
+                        <div class="Frame-phone">
+                            <div class="Frame-local">
+                                <span class="icon-city"></span>
+                                <p class="title-city">Екатеринбург</p>
+                            </div>
+                        </div>
+                        <ul class="list-links-menu">
+                            <li class="text-list-menu">О компании <ul class="list-sublist">
+                                    <li><a href="">Заключение договора</a></li>
+                                </ul>
+                            </li>
+                            <span class="icon-down-arrow"></span>
+                            <li class="text-list-menu">Покупателям <ul class="list-sublist">
+                                    <li><a href="">Система скидок покупателям</a></li>
+                                </ul>
+                            </li>
+                            <span class="icon-down-arrow"></a></span>
+                            <li class="text-list-menu"><a href="">Поставщикам</a></li>
+                            <li class="text-list-menu"><a href="">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="Line-nav"></div>
+                    <div class="Frame-bottom">
+                        <div class="Frame-bottom-frame">
+                            <button onclick="changeIcon()" class="btn-cat">
+                                <p class="text-btn-cat">Каталог товаров</p>
+                            </button>
+                            <button class="btn-cat-icon-close">
+                                <p class="text-btn-cat">Каталог товаров</p>
+                            </button>
+                            <input class="Search-bar icon-search" type="text" placeholder="Поиск товаров">
+                        </div>
+                        <div class="Nav-right-elems">
+                            <div class="favourites">
+                                <span class="favourites-icon"></span>
+                                <p class="favourites-text"><a href="">Избранное</a></p>
+                            </div>
+                            <div class="basket">
+                                <span class="basket-icon"></span>
+                                <p class="favourites-text"><a href="">Корзина</a></p>
+                            </div>
+                            <button class="SignIn">Войти</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header -->
+
+        <!-- Product catalog -->
+        <div class="popupProductCatalog">
+            <div class="blockCatalog">
+                <div class="nav-left-sidebar">
+                    <ul class="nav-left-sidebar-catalog">
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">
+                                <img src="./icons/icon-star.svg" alt="иконка актульного">
+                                Актуальные
+                            </a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">
+                                <img src="./icons/Icon-stocks.svg" alt="иконка акций">
+                                Акции
+                            </a>
+                        </li>
+                        <li class="drop-down-list-3">
+                            <a class="drop-down-list-a newYear" href="">
+                                Новогодние товары
+                                <ul class="list-sublist-catalog">
+                                    <button class="special-btn-catalog"><a class="specBtnCatBg"
+                                            href="">Новинки</a></button>
+                                    <li class="drop-down-list-4"><a class="drop-down-list-a" href="">Все товары категории
+                                        <ul class="list-sublist-catalog-2">
+                                            <li><a class="drop-down-list-a" href="">title category</a>
+                                        </ul>
+                                    </a></li>
+                                    <li><a class="drop-down-list-a" href="">Гирлянды и освещение</a></li>
+                                    <li><a class="drop-down-list-a" href="">Ёлки искусственные</a></li>
+                                    <li><a class="drop-down-list-a" href="">Украшения для ёлки</a></li>
+                                    <li><a class="drop-down-list-a" href="">Сувениры новогодние</a></li>
+                                    <li><a class="drop-down-list-a" href="">Посуда новогодняя</a></li>
+                                    <li><a class="drop-down-list-a" href="">Текстиль новогодний</a></li>
+                                    <li><a class="drop-down-list-a" href="">Карнавальные товары</a></li>
+                                    <li><a class="drop-down-list-a" href="">Игрушки новогодние</a></li>
+                                    <li><a class="drop-down-list-a" href="">Галантерея новогодняя</a></li>
+                                    <li><a class="drop-down-list-a" href="">Упаковка новогодняя</a></li>
+                                    <li><a class="drop-down-list-a" href="">Новогодние книжки</a></li>
+                                    <li><a class="drop-down-list-a" href="">Канцтовары новогодние</a></li>
+                                    <li><a class="drop-down-list-a" href="">Атрибуты праздника</a></li>
+                                    <li><a class="drop-down-list-a" href="">Одежда и обувь новогодние</a></li>
+                                    <li><a class="drop-down-list-a" href="">Товары для дома новогодние</a></li>
+                                    <li><a class="drop-down-list-a" href="">Открытки новогодние</a></li>
+                                    <li><a class="drop-down-list-a" href="">Предыдущие коллекции</a></li>
+                                </ul>
+                            </a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Галантерея и аксессуары</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Хозтовары</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Праздники и подарки</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Интерьерные товары для дома</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Домашний текстиль</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Творчество</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Туризм и активный отдых</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Товары для рассады</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Игрушки, товары для детей</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Пикник</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Спортивные товары</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Спортивные товары</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Интерьерное освещение</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Одежда, обувь, головные уборы</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Снегоуборочный инвентарь</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Бассейны и аксессуары</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Средства гигиены и бытовая химия</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Товары для бани и сауны</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Строительство и ремонт</a>
+                        </li>
+                        <li class="drop-down-list">
+                            <a class="drop-down-list-a" href="">Автотовары</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sliderCatalog">
+                <div class="forBannerCatalog">
+                    <div class="slideForImg Slider_1_Catalog">
+                        <p class="fs-34">Новогодний текстиль</p>
+                        <p class="fs-18">Идеальный подарок</p>
+                    </div>
+                    <div class="slideForImg Slider_2_Catalog">
+                        <p class="fs-34 BebasNeue">Новогодняя гирлянда</p>
+                        <p class="fs-18 Golos-SlCat">Создавайте наружный<br>и внутренний декор</p>
+                    </div>
+                    <div class="slideForImg Slider_3_Catalog">
+                    </div>
+                    <div class="slideForImg Slider_4_Catalog">
+                    </div>
+                </div>
+                <div class="dot-select-slide-2">
+                    <div class="s1 styleSlideDot"></div>
+                    <div class="s2 styleSlideDot"></div>
+                    <div class="s3 styleSlideDot"></div>
+                    <div class="s4 styleSlideDot"></div>
+                </div>
+                <div class="arrow-slider-2">
+                    <div class="arrow-backANDup back-icon-2"></div>
+                    <div class="arrow-backANDup up-icon-2"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Product catalog -->
+
+        <!-- SignIn -->
+        <form class="Sign-In">
+            <div class="Sign-In-Bg">
+                <div class="Frame-1">
+                    <p class="SginIn-Text">Вход</p>
+                    <div class="for-btn-ic-close">
+                        <span class="icon-btn-close"></span>
+                    </div>
+                </div>
+                <div class="Frame-2">
+                    <p>Вход через E-mail</p>
+                    <div class="block-for-inputs">
+                        <input type="text" class="inputForSignIn" name="email" id="inEmail" placeholder="E-mail"
+                            required max="150">
+                        <input type="password" class="inputForSignIn bgImgForPass" name="password" id="inPassword"
+                            placeholder="Пароль" required>
+                    </div>
+                </div>
+                <div class="Frame-3">
+                    <button type="submit" class="ButtonSignIn">Войти</button>
+                    <div class="ForgotYouPass">
+                        <a href="">Забыли пароль?</a>
+                    </div>
+                </div>
+                <div class="LineForForm"></div>
+                <p class="DownText-SignIn">У вас нет аккаунта? <a href="">Зарегистрируйтесь</a></p>
+            </div>
+        </form>
+        <!-- SignIn -->
+
+        <!-- Main Display Slider -->
+        <div class="main-display">
+            <div class="Banner-slider">
+                <div class="slider-line">
+                    <img src="./images/slider/prew_1.png" alt="изображение 1">
+                    <img src="./images/slider/prew_2.png" alt="изображение 2">
+                    <img src="./images/slider/example-3.png" alt="изображение 3">
+                    <img src="./images/slider/example-4.png" alt="изображение 4">
+                </div>
+                <div class="arrow-slider">
+                    <div class="arrow-backANDup back-icon"></div>
+                    <div class="arrow-backANDup up-icon"></div>
+                </div>
+                <!-- For adaptive -->
+                <div class="slider-line-adaptive">
+                    <div class="bgForSLA"></div>
+                    <div class="forTriangles">
+                        <div class="RoundedRectangle"></div>
+                        <div class="withGoods">
+                            <img src="./icons/iconRectApadt.svg" alt="Треугольник">
+                            <p>С товарами<br>«добросад»</p>
+                        </div>
+                    </div>
+                    <div class="dot-select-slide-3">
+                        <div class="a1 styleSlideDot"></div>
+                        <div class="a2 styleSlideDot"></div>
+                        <div class="a3 styleSlideDot"></div>
+                        <div class="a4 styleSlideDot"></div>
+                    </div>
+                    <p class="summerText">дачный сезон<br><span>2023 года</span></p>
+                </div>
+                <!-- For adaptive -->
+                <div class="dot-select-slide">
+                    <div class="r1 styleSlideDot"></div>
+                    <div class="r2 styleSlideDot"></div>
+                    <div class="r3 styleSlideDot"></div>
+                    <div class="r4 styleSlideDot"></div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="cardsItem addFACI-2">
+                    <img class="forAdapCardsImg" src="./icons/respect-icon.svg" alt="respect">
+                    <img class="forAdapCardsImg-2" src="./icons/iconCardTable-1.svg" alt="Иконка для Планшета">
+                    <p>Прямые поставки<br>от производителей</p>
+                </div>
+                <div class="cardsItem">
+                    <img class="forAdapCardsImg" src="./icons/award-icon.svg" alt="award">
+                    <img class="forAdapCardsImg-2" src="./icons/iconCardTable-2.svg" alt="Иконка для Планшета">
+                    <p>30 лет опыта<br>продаж</p>
+                </div>
+                <div class="cardsItem">
+                    <img class="forAdapCardsImg" src="./icons/products-icon.svg" alt="products">
+                    <img class="forAdapCardsImg-2" src="./icons/iconCardTable-3.svg" alt="Иконка для Планшета">
+                    <p>Более 100 000<br>товаров</p>
+                </div>
+                <div class="cardsItem addFACI-2">
+                    <img class="forAdapCardsImg" src="./icons/storageA-icon.svg" alt="storage">
+                    <img class="forAdapCardsImg-2" src="./icons/iconCardTable-4.svg" alt="Иконка для Планшета">
+                    <p>Склад категории А<br>14 000 м<sup><small>2</small></sup></p>
+                </div>
+                <div class="cardsItem addFACI-2">
+                    <img class="forAdapCardsImg" src="./icons/transfer-icon.svg" alt="transfer">
+                    <img class="forAdapCardsImg-2" src="" alt="Иконка не экспортировалась">
+                    <p>Доставка по России<br>и странам ЕАЭС</p>
+                </div>
+            </div>
+        </div>
+        <!-- Main Display Slider -->
+
+        <!-- Our new products -->
+        <div class="OurNewProducts">
+            <div class="HeadOurNewP">
+                <p>Наши новинки</p>
+            </div>
+            <div class="FrameNewOurP">
+                <div class="CardCatProducts">
+                    <div class="prewCardCatP"></div>
+                    <img class="forAdapProducts" src="./images/Our_New_Products/card_categories_table.png" alt="Изображение">
+                </div>
+
+                <div class="CardsCatList">
+                    <div class="CardsCatList-1-2 listCardNoneForTable">
+                        <div class="CardsCatList-doble">
+                            <div class="beach-goods">
+                                <img src="./images/Our_New_Products/beach_goods.png" alt="Пляжные товары">
+                            </div>
+                            <a href="">Пляжные товары</a>
+                        </div>
+                        <div class="CardsCatList-doble">
+                            <div class="other_cards homeTextile">
+                                <img src="./images/Our_New_Products/home_textiles.png" alt="Домашний текстиль">
+                            </div>
+                            <a href="">Домашний текстиль</a>
+                        </div>
+                        <div class="CardsCatList-doble">
+                            <div class="other_cards clothes">
+                                <img src="./images/Our_New_Products/clothes.png" alt="Галантерея и аксессуары">
+                            </div>
+                            <a href="">Галантерея и аксессуары</a>
+                        </div>
+                        <div class="CardsCatList-doble ">
+                            <div class="other_cards chemistry">
+                                <img src="./images/Our_New_Products/chemistry.png" alt="Промышленные товары">
+                            </div>
+                            <a href="">Средства гигиены<br>и бытовая химия</a>
+                        </div>   
+                    </div>
+                    <!-- Адаптив Table -->
+                    <div class="underCardsCatList">
+                        <div class="CardsCatList-1-2-Table">
+                            <div class="CC-D-Table">
+                                <div class="other_cards beach-goods">
+                                    <img src="./images/Our_New_Products/beach_goods_2.png" alt="Пляжные товары">
+                                </div>
+                                <a href="">Пляжные товары</a>
+                            </div>
+                            <div class="CC-D-Table">
+                                <div class="other_cards homeTextile">
+                                    <img src="./images/Our_New_Products/home_textiles_2.png" alt="Домашний текстиль">
+                                </div>
+                                <a href="">Домашний текстиль</a>
+                            </div>
+                        </div>
+                        <div class="CardsCatList-1-2-Table">
+                            <div class="CC-D-Table CCDT-1-1">
+                                <div class="other_cards clothes">
+                                    <img src="./images/Our_New_Products/clothes_2.png" alt="Галантерея и аксессуары">
+                                </div>
+                                <a href="">Галантерея и аксессуары</a>
+                            </div>
+                            <div class="CC-D-Table CCDT-1-1">
+                                <div class="other_cards chemistry">
+                                    <img src="./images/Our_New_Products/chemistry_2.png" alt="Промышленные товары">
+                                </div>
+                                <a href="">Средства гигиены<br>и бытовая химия</a>
+                            </div>  
+                        </div>
+                    </div>
+                    <!-- Адаптив Table -->
+                    <!-- Адаптив Table -->
+                    <div class="underCardsCatList-2">
+                    <div class="CardsCatList-1-2-Table-2">
+                        <div class="CC-D-Table-2 CCDT-2-1">
+                            <div class="other_cards-2 holidays">
+                                <img src="./images/Our_New_Products/holidays_2.png" alt="Праздники и подарки">
+                            </div>
+                            <a href="">Праздники и подарки</a>
+                        </div>
+                        <div class="CC-D-Table-2 CCDT-2-2">
+                            <div class="other_cards-2 household">
+                                <img src="./images/Our_New_Products/household_2.png" alt="Хозтовары">
+                            </div>
+                            <a href="">Хозтовары</a>
+                        </div>
+                        <div class="CC-D-Table-2 CCDT-2-2">
+                            <div class="other_cards-2 sport">
+                                <img src="./images/Our_New_Products/sport_2.png" alt="Спортивные товары">
+                            </div>
+                            <a href="">Спортивные товары</a>
+                        </div>
+                        <div class="CC-D-Table-2 CCDT-2-2">
+                            <div class="other_cards-2 animals">
+                                <img src="./images/Our_New_Products/for-animals_2.png" alt="Товары для животных">
+                            </div>
+                            <a href="">Товары для животных</a>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- Адаптив Table -->
+
+                    <div class="CardsCatList-1-2 listCardNoneForTable">
+                        <div class="CardsCatList-doble">
+                            <div class="other_cards holidays">
+                                <img src="./images/Our_New_Products/holidays.png" alt="Праздники и подарки">
+                            </div>
+                            <a href="">Праздники и подарки</a>
+                        </div>
+                        <div class="CardsCatList-doble">
+                            <div class="other_cards household">
+                                <img src="./images/Our_New_Products/household.png" alt="Хозтовары">
+                            </div>
+                            <a href="">Хозтовары</a>
+                        </div>
+                        <div class="CardsCatList-doble">
+                            <div class="other_cards sport">
+                                <img src="./images/Our_New_Products/sport.png" alt="Спортивные товары">
+                            </div>
+                            <a href="">Спортивные товары</a>
+                        </div>
+                        <div class="CardsCatList-doble">
+                            <div class="other_cards animals">
+                                <img src="./images/Our_New_Products/for-animals.png" alt="Товары для животных">
+                            </div>
+                            <a href="">Товары для животных</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+        <!-- Our new products -->
+
+        <!-- Penultimate card -->
+        <div class="penultimate-card">
+            <div class="penultimate-card-img">
+                <img class="penCardImgNone" src="./images/penultimate_card.png" alt="Карточка товаров">
+                <img class="penCardImgTable" src="./images/simply_PC.png" alt="Карточка">
+            </div>
+        </div>
+        <!-- Penultimate card -->
+
+        <!-- Block for Map -->
+        <div class="BlockForMap">
+            <div class="Frame1BlockForMap">
+                <p class="titleStores">Магазины</p>
+                <div class="GeoContact">
+                    <div class="dropdown">
+                        <input class="text-box" type="text" placeholder="Выберите город" readonly>
+                        <div class="options">
+                            <div onclick="show('Екатеринбург')">
+                                <p>Екатеринбург</p>
+                            </div>
+                            <div onclick="show('Другой город')">
+                                <p>Другой город</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="storeAddresses">
+                        <div class="addressStore">
+                            <p class="titleStore">Магазин на Черняховского</p>
+                            <p class="contactStore">улица Черняховского, 99<br>
+                                +7 (999) 012-34-56<br>
+                                Ежедневно с 09:00 до 22:00</p>
+                        </div>
+                        <div class="addressStore">
+                            <p class="titleStore">Магазин на Блюхера</p>
+                            <p class="contactStore">улица Блюхера, 99<br>
+                                +7 (999) 012-34-56 (доб. 02)<br>
+                                Ежедневно с 10:00 до 21:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Frame2BlockForMap">
+                <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A99f480018f3ac736bd2858e700e83d2c020cc73d3b2a1b688c93cd95c8381867&amp;width=980&amp;height=650&amp;lang=ru_RU&amp;scroll=true"
+                    alt="тут должна быть карта 980 на 650"></script>
+            </div>
+            <div id="Frame2BlockForMap-Table">
+                <script type="text/javascript" charset="utf-8" async 
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6c5a0b6fec709fa27bf37267aa7c2e3728f2ddbafe7660a860b6887eff2a61a6&amp;width=375&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
+                alt="тут должна быть карта 375 на 400"></script>
+            </div>
+        </div>
+        <!-- Block for Map -->
+        
+        <!-- Block for Table footer -->
+        <div class="footerForTable">
+            <div class="table_bar">
+                <div class="frameTableBar">
+                    <div class="menuTableBar">
+                        <img src="./icons/iconMainTable.svg" alt="Главная">
+                        <a href="">Главная</a>
+                    </div>
+                    <div class="menuTableBar">
+                        <img src="./icons/iconCatalogTable.svg" alt="Каталог">
+                        <a href="">Каталог</a>
+                    </div>
+                    <div class="menuTableBar">
+                        <img src="./icons/iconBasketTable.svg" alt="Корзина">
+                        <a href="">Корзина</a>
+                    </div>
+                    <div class="menuTableBar">
+                        <img src="./icons/iconHeartTable.svg" alt="Избранное">
+                        <a href="">Избранное</a>
+                    </div>
+                    <div class="menuTableBar">
+                        <img src="./icons/iconSignInTable.svg" alt="Войти">
+                        <a href="">Войти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Block for Table footer -->
+    </main>
+</body>
+
+</html>

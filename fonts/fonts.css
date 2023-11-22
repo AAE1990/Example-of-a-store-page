@@ -1,0 +1,18 @@
+@font-face {
+    font-family: Golos Text Regular;
+    src: local(Golos Text Regular),
+        url("./Golos-Text-Regular.web/PT/PT/Golos-Text/golos-text_regular.woff"),
+        url("./Golos-Text-Regular.web/PT/PT/Golos-Text/golos-text_regular.woff2");
+}
+
+@font-face {
+    font-family: Bebas Neue;
+    src: local(Bebas Neue),
+    url("BebasNeue-Regular.ttf");
+}
+
+@font-face {
+    font-family: Bebas Neue Cyrillic;
+    src: local(Bebas Neue Cyrillic),
+    url("BebasNeue-Cyrillic.ttf");
+}
